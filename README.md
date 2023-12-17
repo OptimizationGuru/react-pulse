@@ -13,9 +13,9 @@
 - Remove Comments
 - Code Splitting
 
--package.json file is a configuration for npm, it keeps track of what version of each dependency is installed in the repository
--our project is dependent on a lot of dependencies, and npm manages those dependencies
--npm takes care of what is the version of thpse dependencies inside package.json
+- package.json file is a configuration for npm, it keeps track of what version of each dependency is installed in the repository
+- our project is dependent on a lot of dependencies, and npm manages those dependencies
+- npm takes care of what is the version of thpse dependencies inside package.json
 
 
 # JOB of a Bundler/Parcel/Webpack
@@ -42,24 +42,28 @@
   
 
 # Type of dependecies
--there are two kind of dependencies => dev-dependency and normal dependency ==> read about them
+- there are two kind of dependencies => dev-dependency and normal dependency ==> read about them
 
 # Diffrence b/w ^(carot) and ~(tilde) ?
--carot helps to upgrade for all minor version of dpeendencies
+- carot helps to upgrade for all minor version of dpeendencies
 - tilde will update the only for major version of dependencies
 
 
--packagelock.json ==> keeps track of the exact version of dependencies, no tilde or carot
--what is integrity in packagelock.json..?
--Node Modules ==> contains all the code that we fetch from npm, it contain all the dependencies and all the transitive dependencies
+- packagelock.json ==> keeps track of the exact version of dependencies, no tilde or carot
+- what is integrity in packagelock.json..?
+- Node Modules ==> contains all the code that we fetch from npm, it contain all the  dependencies and all the transitive dependencies
 
 
--if you have package and packagelock.json, node modules can be recreated ==> npm i
+- if you have package and packagelock.json, node modules can be recreated ==> npm i
 - whatever you can regenerate, don't put it on git
 
--npm means installing a dependency
--npx means executing the package
+- npm means installing a dependency
+- npx means executing the package
 
 - CDN links is not a good way to fetch react in your code base, bcoz fetching REact from cdn is a costly affair, if we already have react in our node modules it becomes very easy to manage react
 
--Read about Browserslist;
+- Read about Browserslist;
+- Read about Babel
+- Read about various tags of jsx i.e. img tag
+- To give attribute in JSX you have to use camelCase
+- Explore various attributes and various tags in JSX
