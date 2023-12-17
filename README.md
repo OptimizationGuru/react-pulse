@@ -18,7 +18,7 @@
 - npm takes care of what is the version of thpse dependencies inside package.json
 
 
-# JOB of a Bundler/Parcel/Webpack
+# Job of a Bundler/Parcel/Webpack
 - index.html is the source so basically parcel goes to index.html and builds a development build  and host it on local server 1234 
 - Dev Build
 - Hot Module Replacement
