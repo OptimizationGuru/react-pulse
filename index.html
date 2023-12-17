@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div id="root">
-        <h1>Hello World! Using HTML</h1>
-    </div>
+    <div id="root"></div>
 
   <div id="shoot"></div>
 
-  <div id="trunk"></div>
+  
     <script>
         let shoot = document.getElementById('shoot')
         let headingbyJS = document.createElement('h1')
         headingbyJS.innerHTML = 'Hello World! Using JS'
         shoot.appendChild(headingbyJS)
     </script>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="./App.js">   
+        <script type="module" src="./App.js">   
     </script>
 </body>
 </html>

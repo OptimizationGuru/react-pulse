@@ -1,5 +1,9 @@
+
+import React from "react";
+import  ReactDOM  from "react-dom/client";
+
 const heading = React.createElement('h1', {id:"heading", xyz:'abc'}, "Hello World Using React!")
-const root = ReactDOM.createRoot(document.getElementById('trunk'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(heading) // it replaces the existing DOM inside root
 
 
@@ -12,7 +16,7 @@ const parent = React.createElement('div', {id:'parent'},
 
 React.createElement('div', {id:'child'},
 
-React.createElement('h1', {}, 'I am an h1 tag')))
+React.createElement('h1', {}, 'Namaste Bharat 🇮🇳')))
 
 root.render(parent)
 
