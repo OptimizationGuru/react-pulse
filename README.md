@@ -67,3 +67,10 @@
 - Read about various tags of jsx i.e. img tag
 - To give attribute in JSX you have to use camelCase
 - Explore various attributes and various tags in JSX
+
+# Config Driven UI
+
+- Read about it => data driven website i.e config driven UI
+- UI layer and Data layer toghether make the UI for modern web pages
+
+# Test 🚀
