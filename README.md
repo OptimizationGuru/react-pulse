@@ -74,3 +74,29 @@
 - UI layer and Data layer toghether make the UI for modern web pages
 
 # Test 🚀
+
+
+
+# QuickCrave 🤩
+
+
+- Building Food Ordering App - QuickCrave
+- Header - Logo, Nav-Items, Cart
+- Body - Search, Restaurant Container -Cards inside - img, Star Rating, cuisine  delivery time etc
+ - Footer - copyright, links, contact, address, info
+
+
+- Never ever keep your hard-coded data into your component folder
+- Try and find out where default export and named import can exist in same component
+
+# React Hooks
+
+- they are normal js utility functions written by facebook developers
+- this function comes with super-power => utility functions
+- need is to import these utility function
+- two very imp hook is => 1) useEffect(), 2) useState() => super powerful state variable
+- whenever a state variable changes, React re-render the component
+- React makes the process of DOM manipulation very efficient => fastest library for DOM manipulation
+- React uses Reconciliation Algorithm (aka React Fibre) => uses virtual DOM (i.e representation of actual DOM ==> nothing but React Element) 
+- Diff algorithm came out in React16 =>  finds out the difference b/w OLD virtual DOM and New Virtual Dom and actually updates the DOM => this is called as Reconciliation
+- Read about React Fiber
