@@ -1,36 +1,49 @@
-import RestaurantCard from "./restaurant-card"
-import restaurantData from './utils/restaurantData'
-import { useState } from "react" // hook used to create state variables
+import { useState, useEffect } from 'react'
+import RestaurantCard from './restaurant-card'
+import Shimmer from './shimmer'
+
 
 const Body =()=>{
+    const [restaurantList, setRestaurantList] = useState([])
 
-    // State variable => Super powerful variable => it maintains the state of the component
-    // you have to create a state variable using useState() hook
-    //  whenever you call this useState() hook => it will return you a state variable contained in an array
+    const  fetchData = async ()=>{
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.147291053160085&lng=75.84629114717245&collection=83644&tags=layout_CCS_Pizza&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
+        const json = await data.json()
+        const trimmed_data = json.data.cards.splice(3, json.data.cards.length-1)
+         setRestaurantList(trimmed_data)            
+    }
+    
 
-const [restaurantList, setRestaurantList] = useState(restaurantData);  //state variable with default value as '[]'
+    useEffect(()=>{
+          fetchData()
+    },[])
 
-    return(
-        <div className="body">
+   
+
+
+// Conditional Rendenring
+
+    return   restaurantList.length===0 ? (<Shimmer/> ): (<div className="body">
+             
             <div className="search">
-                <button className="search-btn" onClick={()=>{
-                    const newRestaurantData = restaurantList.filter(res=> res.avgStar >= 4)
+            <button className="beautiful-button" onClick={()=>{
+                    const newRestaurantData = restaurantList.filter(res => res?.card?.card?.info?.avgRating >= 4)
+                    
                     setRestaurantList(newRestaurantData)
-                }}
-                >
-                    Top Rated Restaurants
+                }}>
+                Top Rated Restaurants
                 </button>
+                
             </div>
             <div className="res-container">
                {
-                restaurantList.map(res => 
-                    <RestaurantCard key={res.id} data={res}/>
+                restaurantList.map((item, idx) => 
+                    <RestaurantCard key={idx} data={item.card.card.info}/>
                 )
                }
                
             </div>
         </div>
-    )
+)
 }
-
 export default Body
