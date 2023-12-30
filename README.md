@@ -167,3 +167,20 @@
 - in this re-rendenring process, a new instance of the state variable is created ==> i.e. a new variable is created
 - with default value as the last updated value => this is how const state variable modifies it's value
 - Reconciliation process while re-rendering => comparison b/w virtual DOM object and updating using Diff Algorithm
+- whenever state variable updates, react triggers a reconcialiation cycle (re-renders the component) 
+
+
+# useEffect Hook
+
+- it is called using two arguments => one call-back function, and other => dependency array
+- when is this useEffect called..? => it is called after every render of that component
+-  if no dependency array is passed in useEffect => useEffect is called on every re-render of the component
+- dependency array controls how useEffect is called => if empty dependency array is passed => useEffect is called on initial(first)render only - just once
+- if some dependency is passed  in the dependency array in useEffect, useEffect is called everytime the dependency value changes/updates other than on initial render
+
+# useState Hook
+
+- never create state variable outside your function component
+- it is used to create local state variables inside your function component
+- always call useState Variables on the top => readable and good looking code
+- never create a state variable inside if/else condition or for loop or inside functions
