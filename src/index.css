@@ -158,3 +158,83 @@
     float: inline-end;
     margin: 15px;
   }
+
+  .restaurant-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  .restaurant-page-header {
+    margin-top: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #D2B48C;
+    color: #fff;
+  }
+  
+  .main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .restaurant-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .restaurant-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .info-text {
+    margin-left: 20px;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    color: #666;
+  }
+  
+  .star {
+    color: #f8d825;
+    margin-right: 5px;
+  }
+  
+  .rating-value {
+    font-weight: bold;
+  }
+  
+  .menu {
+    margin-bottom: 20px;
+  }
+  
+  .menu h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .order-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #fc8019;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }

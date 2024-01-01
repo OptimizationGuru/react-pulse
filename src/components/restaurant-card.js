@@ -1,6 +1,6 @@
 
+import { img_url } from "./utils/constants"
 
-const img_url ='https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'
 const RestaurantCard =(resData)=>{
     const {id, name, locality, areaName, avgRating, cuisines, isOpen, cloudinaryImageId } = resData.data 
     return (

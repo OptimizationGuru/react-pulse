@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import RestaurantCard from './restaurant-card'
+import { Link } from 'react-router-dom'
 import Shimmer from './shimmer'
 
 
@@ -10,9 +11,9 @@ const Body =()=>{
     const [suggestions, setSuggestions] = useState([]);
 
     const  fetchData = async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.147291053160085&lng=75.84629114717245&collection=83644&tags=layout_CCS_Pizza&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const json = await data.json()
-        const trimmed_data = json.data.cards.splice(3, json.data.cards.length-1)
+        const trimmed_data = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
          setRestaurantList(trimmed_data) 
          setSuggestions(trimmed_data)           
     }
@@ -23,12 +24,20 @@ const Body =()=>{
     },[])
 
 
-    const filterRestaurants=()=>{
-        if(searchText.length===1)
-        // setSuggestions(restaurantList)
-        console.log('filter res', searchText.length)
-        const searchedRestaurant =  restaurantList.filter(res=> res?.card?.card?.info?.name.toLowerCase().includes(searchText.toLowerCase()))
+    const searchRestaurants=()=>{
+        if(searchText.length===0)
+        setSuggestions(restaurantList)
+       
+        const searchedRestaurant =  restaurantList.filter(res=> res?.info?.name.toLowerCase().includes(searchText.toLowerCase()))
         setSuggestions(searchedRestaurant)
+    }
+
+    const filterTopRestaurants =()=>{
+       
+        const newRestaurantData = suggestions.filter(res => res?.info?.avgRating >= 4.5)
+      
+         setSuggestions(newRestaurantData)
+        
     }
     
 // Conditional Rendenring
@@ -52,16 +61,12 @@ const Body =()=>{
               </div>
               <div className="box">
              <button className='search-btn'
-             onClick={filterRestaurants}>
+             onClick={searchRestaurants}>
              Search
              </button>
              </div>
               <div  className="box">
-            <button className="beautiful-button" onClick={()=>{
-                    const newRestaurantData = suggestions.filter(res => res?.card?.card?.info?.avgRating >= 4)
-                    
-                    setRestaurantList(newRestaurantData)
-                }}>
+            <button className="beautiful-button" onClick={filterTopRestaurants}>
                 Top Rated Restaurants
                 </button>
                 </div> 
@@ -69,8 +74,8 @@ const Body =()=>{
             
             <div className="res-container">
                {
-                suggestions.map((item, idx) => 
-                    <RestaurantCard key={idx} data={item.card.card.info}/>
+                suggestions.map((item) => 
+                    <Link to={'/restaurant/'+ item?.info?.id} key={item?.info?.id}><RestaurantCard  data={item?.info}/></Link>
                 )
                }
                
