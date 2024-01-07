@@ -184,3 +184,19 @@
 - it is used to create local state variables inside your function component
 - always call useState Variables on the top => readable and good looking code
 - never create a state variable inside if/else condition or for loop or inside functions
+
+
+# Optimise your App
+
+- Modular code
+- Readable Code
+- Single Responsibility Principle
+- Custom Hooks
+- Lighter Components
+- Chuncking
+- Lazy Loading
+- lazy() function
+
+# Higher Order Component
+
+- It is a function which takes a component as argument and return an enhanced component i.e. add some new feature to already existing component
