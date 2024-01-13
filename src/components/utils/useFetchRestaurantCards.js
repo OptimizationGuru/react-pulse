@@ -16,7 +16,7 @@ const useFetchRestaurantCards = () => {
 			const json = await data.json()
 
 			trimmed_data =
-				json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+				json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
 
 			setRestaurantCardsData(trimmed_data)
 		} catch (err) {

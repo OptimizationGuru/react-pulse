@@ -11,30 +11,27 @@ const Header = () => {
 		changeName(btnName)
 	}
 	return (
-		<div className="header">
+		<div className="flex justify-between h-32 bg-pink-100  shadow-md mb-4  sm:bg-yellow-50 lg:bg-green-50 fixed w-full top-0 left-0">
 			<div>
-				<img className="logo" src={Header_LOGO_URL} />
+				<img className="w-[139px]" src={Header_LOGO_URL} />
 			</div>
-			<div className="nav-items">
-				<ul>
-					<li>
+			<div>
+				<ul className="flex justify-center p-4 m-4">
+					<li className="m-4 p-4">
 						<Link to="/">Home</Link>
 					</li>
-					<li>
+					<li className="m-4 p-4">
 						<Link to="/about">About</Link>
 					</li>
-					<li>
+					<li className="m-4 p-4">
 						<Link to="/contact"> Contact Us</Link>
 					</li>
-					<li>
+					<li className="m-4 p-4">
 						<Link to="/groceries">Groceries</Link>
 					</li>
-					<li>Cart</li>
-					<li>
-						<button onClick={toggle} className="btn-name">
-							{' '}
-							{buttonName}
-						</button>
+					<li className="m-4 p-4">Cart</li>
+					<li className="m-4 p-4">
+						<button onClick={toggle}>{buttonName}</button>
 					</li>
 				</ul>
 			</div>

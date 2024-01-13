@@ -19,32 +19,32 @@ const Body = () => {
 	return restaurantCardsData?.length === 0 ? (
 		<Shimmer />
 	) : (
-		<div className="body">
-			<div className="top-container">
-				<div className="box">
-					<div className="search-component">
-						<input
-							type="text"
-							className="search-input"
-							placeholder="Search your Favourite Restaurants...!"
-							value={searchText}
-							onChange={e => {
-								setsearchText(e.target.value)
-							}}
-						/>
-					</div>
+		<div className="mt-44">
+			<div className="flex justify-center">
+				<div className=" p-4 w-2/5">
+					<input
+						type="text"
+						className="px-16 py-4 w-full border border-solid "
+						placeholder="Search your Favourite Restaurants here...!"
+						value={searchText}
+						onChange={e => {
+							setsearchText(e.target.value)
+						}}
+					/>
 				</div>
-				<div className="box">
-					<button className="search-btn">Search</button>
+				<div>
+					<button className="px-6 py-4 bg-green-100 m-4 rounded-lg">Search</button>
 				</div>
-				<div className="box">
-					<button className="beautiful-button" onClick={filterTopRestaurants}>
+				<div>
+					<button
+						className="px-6 py-4 bg-green-100 m-4 rounded-lg"
+						onClick={filterTopRestaurants}>
 						Top Rated Restaurants
 					</button>
 				</div>
 			</div>
 
-			<div className="res-container">
+			<div className="flex flex-wrap justify-center">
 				{restaurantCardsData
 					.filter(item => {
 						if (isTopRestaurantsTrue) {
