@@ -13,8 +13,10 @@ const useFetchResData = resId => {
 	const fetchRestaurantData = async () => {
 		const data = await fetch(swiggy_resId_url + resId)
 		const json = await data.json()
-		// console.log(json?.data?.cards[0]?.card?.card?.info, 'json')
-		const restaurantData = json?.data?.cards[0]?.card?.card?.info
+
+		// console.log(json, 'json')
+		const restaurantData = json?.data?.cards
+
 		setResData(restaurantData)
 	}
 

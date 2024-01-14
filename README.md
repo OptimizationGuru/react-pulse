@@ -205,3 +205,14 @@
 # Material UI,  Chakra UI, Bootstrap, TailwindCSS, ant-design => CSS Frameworks
 
 # TailwindCSS uses postCSS behind the scenes to change CSS using JavaScript
+
+# Higher Order Component is a function that takes a component as input enhances it, modifies it and then returns a new enchanced component
+
+
+# Controlled and Uncontrolled Componenets, Lifting the State Up ==> Read about them
+
+# Lifting the State Up React
+
+# Props Drilling
+
+# Redux zustand libraries for statemanagement
