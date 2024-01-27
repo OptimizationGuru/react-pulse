@@ -216,3 +216,11 @@
 # Props Drilling
 
 # Redux zustand libraries for statemanagement
+
+# Redux Toolkit
+- Install Redux Toolkit @reduxjs/toolkit and react-redux
+- Build our Store
+- connect our Store to our app
+- Slice (cart Slice)
+- dispatch action
+- Selector
