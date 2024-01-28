@@ -224,3 +224,4 @@
 - Slice (cart Slice)
 - dispatch action
 - Selector
+- Read about RTK Query - how to call api and store data in Redux store 

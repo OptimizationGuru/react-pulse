@@ -19,14 +19,14 @@ const RestaurantCard = resData => {
 
 	return (
 		<div className="m-4 p-4 w-[250px] h-[480px] rounded-xl bg-gray-100 hover:bg-gray-300 relative">
-			<div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+			<div className="aspect-h-1 aspect-w-1 w-full overflow-auto rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
 				<img
 					className="h-full w-full object-cover object-center lg:h-full lg:w-full"
 					src={swiggy_img_url + cloudinaryImageId}
 				/>
-				<div className="absolute top-1/2  rounded-md ml-2 mt-2  w-auto bg-slate-500">
+				<div className=" absolute top-1/2  rounded-md ml-2 mt-2  w-auto bg-slate-500">
 					<h1 className="text-white font-semibold text-2xl pl-2 ">
-						{aggregatedDiscountInfoV3.header} {aggregatedDiscountInfoV3.subHeader}
+						{aggregatedDiscountInfoV3?.header} {aggregatedDiscountInfoV3?.subHeader}
 					</h1>
 				</div>
 			</div>

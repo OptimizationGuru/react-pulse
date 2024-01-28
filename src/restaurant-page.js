@@ -1,4 +1,3 @@
-import { swiggy_img_url } from './components/utils/constants'
 import { useParams } from 'react-router-dom'
 import useFetchResData from './components/utils/useFetchResData'
 import Shimmer from './components/shimmer'
@@ -27,7 +26,7 @@ const Restaurant = () => {
 				{restaurantIntro?.cuisines.join(', ')} - {restaurantIntro?.costForTwoMessage}
 			</p>
 
-			{categories.map((category, idx) => (
+			{categories?.map((category, idx) => (
 				<RestaurantCategory
 					key={category?.card?.card.title}
 					data={category?.card?.card}
