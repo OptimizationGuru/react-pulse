@@ -42,7 +42,9 @@ const Header = () => {
 						<Link to="/cart">Cart ({cartItems.length} Items)</Link>
 					</li>
 					<li className="m-4 p-4">
-						<button onClick={toggle}>{buttonName}</button>
+						<Link to="/login">
+							<button onClick={toggle}>{buttonName}</button>
+						</Link>
 					</li>
 					<li className="m-4 p-4 font-bold">{loggedinUser}</li>
 				</ul>

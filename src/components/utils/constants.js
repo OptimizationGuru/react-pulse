@@ -6,3 +6,5 @@
  export const  swiggy_resId_url= 'https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId='
 
  export const swiggy_img_url ='https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'
+
+ export const login_page_bg_img_url ='https://elements-cover-images-0.imgix.net/ea951866-f0dd-4511-b66b-03250f086910?auto=compress%2Cformat&w=2038&fit=max&s=d0c68dcacb285dcdc64bef6ba84f91f0'

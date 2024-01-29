@@ -11,6 +11,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import appStore from './components/utils/appStore'
 import Cart from './components/cart'
+import Login from './components/login'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -74,6 +75,10 @@ const appRouter = createBrowserRouter([
 			}
 		],
 		errorElement: <Error />
+	},
+	{
+		path: '/login',
+		element: <Login />
 	}
 ])
 
