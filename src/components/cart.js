@@ -21,7 +21,7 @@ const Cart = () => {
 				</div>
 			</div>
 			<div className="mx-auto my-[10px] p-4">
-				{cartItems.length && <ItemList items={cartItems} />}
+				{cartItems.length !== 0 && <ItemList items={cartItems} />}
 			</div>
 		</div>
 	)
